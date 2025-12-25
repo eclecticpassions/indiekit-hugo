@@ -29,17 +29,14 @@
       "frontMatterFormat": "toml"
     },
     "@indiekit/store-github": {
-      "user": "process.env.GITHUB_USERNAME",
-      "repo": "process.env.GITHUB_REPOSITORY",
-      "branch": "main",
-      "token": "process.env.GITHUB_TOKEN"
+      "user": "REDACTED",
+      "repo": "REDACTED"
     },
     "@indiekit/syndicator-mastodon": {
-      "accessToken": "process.env.MASTODON_ACCESS_TOKEN",
       "includePermalink": true,
       "checked": true,
       "url": "https://REDACTED",
-      "user": "process.env.MASTODON_USERNAME"
+      "user": "REDACTED"
     }
   },
   "dependencies": {
