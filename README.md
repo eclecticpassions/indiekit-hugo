@@ -7,3 +7,7 @@ Learn more at <https://getindiekit.com>
 - syndicator-mastodon
 - store-github
 - preset-hugo
+
+## Notes on hosting
+
+- Trying with Vercel (Free tier)
