@@ -1,9 +1,10 @@
-import { createIndieKit } from "@indiekit/indiekit";
+import indiekit from "@indiekit/indiekit";
+import config from "../indiekit.config.js";
 
-const app = await createIndieKit({
-  // Your config will come from env vars
-});
+const app = indiekit(config);
 
-export default async function handler(req, res) {
-  await app(req, res);
+export default async function (req, res) {
+  return new Promise((resolve) => {
+    app(req, res, () => resolve());
+  });
 }
