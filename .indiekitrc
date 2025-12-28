@@ -1,0 +1,63 @@
+{
+  "application": {
+    "timeZone": "Asia/Hong_Kong",
+    "themeColor": "#FFB800",
+    "themeColorScheme": "dark",
+    "name": "BurgeonLab: Indiekit Server"
+  },
+  "publication": {
+    "me": "https://burgeonlab.com",
+    "mediaStore": "@indiekit/store-s3",
+    "store": "@indiekit/store-github",
+    "enrichPostData": true,
+    "postTypes": {
+      "note": {
+        "name": "Notes",
+        "post": {
+          "path": "content/notes/{yyyy}/{yyyyMMdd-HHmm}.md",
+          "url": "content/notes/{yyyy}/{slug}"
+        }
+      },
+      "photo": {
+        "name": "Photo",
+        "post": {
+          "path": "content/photos/{yyyy}/{yyyyMMdd-HHmm}.md",
+          "url": "content/photos/{yyyy}/{slug}"
+        }
+      }
+    }
+  },
+  "plugins": [
+    [
+      "@indiekit/preset-hugo",
+      {
+        "frontMatterFormat": "toml"
+      }
+    ],
+    [
+      "@indiekit/syndicator-mastodon",
+      {
+        "includePermalink": true,
+        "checked": false,
+        "url": "https://REDACTED",
+        "user": "REDACTED"
+      }
+    ],
+    [
+      "@indiekit/store-s3",
+      {
+        "region": "REDACTED",
+        "endpoint": "https://s3.REDACTED.io.cloud.ovh.net",
+        "bucket": "REDACTED"
+      }
+    ],
+    [
+      "@indiekit/store-github",
+      {
+        "user": "REDACTED",
+        "repo": "REDACTED",
+        "branch": "main"
+      }
+    ]
+  ]
+}
