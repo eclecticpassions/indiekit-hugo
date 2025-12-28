@@ -22,6 +22,10 @@
         "name": "Photo",
         "post": {
           "path": "content/photos/{yyyy}/{yyyyMMdd-HHmm}.md",
+          "url": "content/photos/{yyyy}/{slug}"
+        },
+        "media": {
+          "path": "content/photos/{yyyy}/{yyyyMMdd-HHmm}.{ext}",
           "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/static/photos/{filename}.{ext}"
         }
       }
