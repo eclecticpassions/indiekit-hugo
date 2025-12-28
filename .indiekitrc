@@ -27,37 +27,29 @@
       }
     }
   },
-  "plugins": [
-    [
-      "@indiekit/preset-hugo",
-      {
-        "frontMatterFormat": "toml"
-      }
-    ],
-    [
-      "@indiekit/syndicator-mastodon",
-      {
-        "includePermalink": true,
+    "plugins": [
+    "@indiekit/preset-hugo",
+    "@indiekit/store-github",
+    "@indiekit/store-s3",
+    "@indiekit/syndicator-mastodon"
+  ],
+  "@indiekit/preset-hugo": {
+    "frontMatterFormat": "toml"
+  },
+  "@indiekit/store-github": {
+    "user": "REDACTED",
+    "repo": "REDACTED",
+    "branch": "main"
+  },
+  "@indiekit/store-s3": {
+    "region": "REDACTED",
+    "endpoint": "https://s3.REDACTED.io.cloud.ovh.net",
+    "bucket": "REDACTED"
+  },
+  "@indiekit/syndicator-mastodon": {
+    "includePermalink": true,
         "checked": false,
         "url": "https://REDACTED",
         "user": "REDACTED"
-      }
-    ],
-    [
-      "@indiekit/store-s3",
-      {
-        "region": "REDACTED",
-        "endpoint": "https://s3.REDACTED.io.cloud.ovh.net",
-        "bucket": "REDACTED"
-      }
-    ],
-    [
-      "@indiekit/store-github",
-      {
-        "user": "REDACTED",
-        "repo": "REDACTED",
-        "branch": "main"
-      }
-    ]
-  ]
+  }
 }
