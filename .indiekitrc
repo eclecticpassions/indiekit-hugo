@@ -30,7 +30,7 @@
         },
         "media": {
           "path": "content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.{ext}",
-          "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}"
+          "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.{ext}"
         }
       }
     }
