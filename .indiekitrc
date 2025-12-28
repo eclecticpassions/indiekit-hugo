@@ -22,12 +22,12 @@
         "name": "Photo",
         "post": {
           "path": "content/photos/{yyyy}/{yyyyMMdd-HHmm}.md",
-          "url": "content/photos/{yyyy}/{slug}"
+          "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/static/photos/{filename}.{ext}"
         }
       }
     }
   },
-    "plugins": [
+  "plugins": [
     "@indiekit/preset-hugo",
     "@indiekit/store-github",
     "@indiekit/store-s3",
@@ -48,8 +48,8 @@
   },
   "@indiekit/syndicator-mastodon": {
     "includePermalink": true,
-        "checked": false,
-        "url": "https://REDACTED",
-        "user": "REDACTED"
+    "checked": false,
+    "url": "https://REDACTED",
+    "user": "REDACTED"
   }
 }
