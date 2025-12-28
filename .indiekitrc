@@ -19,18 +19,18 @@
         },
         "media": {
           "path": "content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.{ext}",
-          "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/static/photos/{filename}.{ext}"
+          "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}"
         }
       },
       "photo": {
         "name": "Photo",
         "post": {
           "path": "content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.md",
-          "url": "photos/{D60}-{slug}"
+          "url": "photos/{yyyy}-{D}/{slug}"
         },
         "media": {
           "path": "content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.{ext}",
-          "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/static/photos/{filename}.{ext}"
+          "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}"
         }
       }
     }
