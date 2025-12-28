@@ -14,18 +14,22 @@
       "note": {
         "name": "Notes",
         "post": {
-          "path": "content/notes/{yyyy}/{yyyyMMdd-HHmm}.md",
+          "path": "content/notes/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.md",
           "url": "content/notes/{yyyy}/{slug}"
+        },
+        "media": {
+          "path": "content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.{ext}",
+          "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/static/photos/{filename}.{ext}"
         }
       },
       "photo": {
         "name": "Photo",
         "post": {
-          "path": "content/photos/{yyyy}/{yyyyMMdd-HHmm}.md",
-          "url": "content/photos/{yyyy}/{slug}"
+          "path": "content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.md",
+          "url": "photos/{D60}-{slug}"
         },
         "media": {
-          "path": "content/photos/{yyyy}/{yyyyMMdd-HHmm}.{ext}",
+          "path": "content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.{ext}",
           "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/static/photos/{filename}.{ext}"
         }
       }
