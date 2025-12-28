@@ -16,29 +16,6 @@
   "engines": {
     "node": "20.x"
   },
-  "indiekit": {
-    "plugins": [
-      "@indiekit/preset-hugo",
-      "@indiekit/store-github",
-      "@indiekit/syndicator-mastodon"
-    ],
-    "publication": {
-      "me": "https://burgeonlab.com"
-    },
-    "@indiekit/preset-hugo": {
-      "frontMatterFormat": "toml"
-    },
-    "@indiekit/store-github": {
-      "user": "REDACTED",
-      "repo": "REDACTED"
-    },
-    "@indiekit/syndicator-mastodon": {
-      "includePermalink": true,
-      "checked": true,
-      "url": "https://REDACTED",
-      "user": "REDACTED"
-    }
-  },
   "dependencies": {
     "@indiekit/indiekit": "^1.0.0-beta.24",
     "@indiekit/preset-hugo": "^1.0.0-beta.20",
