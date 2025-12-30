@@ -52,7 +52,8 @@
   "@indiekit/store-s3": {
     "region": "REDACTED",
     "endpoint": "https://s3.REDACTED.io.cloud.ovh.net",
-    "bucket": "REDACTED"
+    "bucket": "REDACTED",
+    "acl": "public-read"
   },
   "@indiekit/syndicator-mastodon": {
     "includePermalink": true,
