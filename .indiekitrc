@@ -15,7 +15,7 @@
         "name": "Notes",
         "post": {
           "path": "content/notes/{yyyy}/{DDD}{n}.md",
-          "url": "/notes/{yyyy}/{slug}"
+          "url": "/notes/{yyyy}/{DDD}{n}"
         },
         "media": {
           "path": "content/photos/{yyyy}/{DDD}{n}.{ext}",
@@ -26,7 +26,7 @@
         "name": "Photo",
         "post": {
           "path": "content/photos/{yyyy}/{DDD}{n}.md",
-          "url": "photos/{yyyy}/{slug}"
+          "url": "photos/{yyyy}/{DDD}{n}"
         },
         "media": {
           "path": "content/photos/{yyyy}/{DDD}{n}.{ext}",
