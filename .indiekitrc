@@ -14,23 +14,23 @@
       "note": {
         "name": "Notes",
         "post": {
-          "path": "content/notes/{yyyy}/{DDD}{n}.md",
-          "url": "/notes/{yyyy}/{slug}"
+          "path": "content/notes/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.md",
+          "url": "content/notes/{yyyy}/{slug}"
         },
         "media": {
-          "path": "content/photos/{yyyy}/{DDD}{n}.{ext}",
-          "url": "https://REDACTED.b-cdn.net/content/photos/{yyyy}/{DDD}{n}"
+          "path": "content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.{ext}",
+          "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}"
         }
       },
       "photo": {
         "name": "Photo",
         "post": {
-          "path": "content/photos/{yyyy}/{DDD}{n}.md",
-          "url": "photos/{yyyy}/{slug}"
+          "path": "content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.md",
+          "url": "photos/{yyyy}-{D}/{slug}"
         },
         "media": {
-          "path": "content/photos/{yyyy}/{DDD}{n}.{ext}",
-          "url": "https://REDACTED.b-cdn.net/content/photos/{yyyy}/{DDD}{n}"
+          "path": "content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.{ext}",
+          "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.{ext}"
         }
       }
     }
