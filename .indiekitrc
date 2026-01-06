@@ -39,7 +39,8 @@
     "@indiekit/preset-hugo",
     "@indiekit/store-github",
     "@indiekit/store-s3",
-    "@indiekit/syndicator-mastodon"
+    "@indiekit/syndicator-mastodon",
+    "@indiekit/endpoint-image"
   ],
   "@indiekit/preset-hugo": {
     "frontMatterFormat": "toml"
@@ -60,5 +61,6 @@
     "checked": false,
     "url": "https://REDACTED",
     "user": "REDACTED"
-  }
+  },
+  "mountPath": "/image"
 }
