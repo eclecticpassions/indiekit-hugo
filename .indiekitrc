@@ -40,7 +40,8 @@
     "@indiekit/store-github",
     "@indiekit/store-s3",
     "@indiekit/syndicator-mastodon",
-    "@indiekit/endpoint-image"
+    "@indiekit/endpoint-image",
+    "@indiekit/post-type-photo"
   ],
   "@indiekit/preset-hugo": {
     "frontMatterFormat": "toml"
@@ -66,4 +67,10 @@
     "mountPath": "/image",
     "me": "https://REDACTED.b-cdn.net"
   },
+  "@indiekit/post-type-photo": {
+    "name": "Photo",
+    "fields": [
+      "locations"
+    ]
+  }
 }
