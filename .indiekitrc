@@ -69,8 +69,22 @@
   },
   "@indiekit/post-type-photo": {
     "name": "Photo",
-    "fields": [
-      "locations"
-    ]
+    "fields": {
+      "photo": {
+        "required": true
+      },
+      "content": {},
+      "category": {},
+      "geo": {},
+      "locations": {},
+      "post-status": {},
+      "mp-photo-alt": {
+        "required": true
+      },
+      "published": {
+        "required": true
+      },
+      "visibility": {}
+    }
   }
 }
