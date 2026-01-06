@@ -64,8 +64,7 @@
     "user": "REDACTED"
   },
   "@indiekit/endpoint-image": {
-    "mountPath": "/image",
-    "me": "https://REDACTED.b-cdn.net"
+    "mountPath": "/image"
   },
   "@indiekit/post-type-photo": {
     "name": "Photo",
