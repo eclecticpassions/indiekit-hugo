@@ -75,7 +75,7 @@
       "content": {},
       "category": {},
       "geo": {},
-      "locations": {},
+      "location": {},
       "post-status": {},
       "mp-photo-alt": {
         "required": true
