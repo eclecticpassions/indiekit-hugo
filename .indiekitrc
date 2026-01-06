@@ -18,8 +18,8 @@
           "url": "/notes/{yyyy}/{DDD}{n}"
         },
         "media": {
-          "path": "content/photos/{yyyy}/{DDD}{n}.{ext}",
-          "url": "https://REDACTED.b-cdn.net/content/photos/{yyyy}/{DDD}{n}.{ext}"
+          "path": "content/media/{yyyy}/{DDD}{n}.{ext}",
+          "url": "content/media/{yyyy}/{DDD}{n}.{ext}"
         }
       },
       "photo": {
@@ -29,8 +29,8 @@
           "url": "photos/{yyyy}/{DDD}{n}"
         },
         "media": {
-          "path": "content/photos/{yyyy}/{DDD}{n}.{ext}",
-          "url": "https://REDACTED.b-cdn.net/content/photos/{yyyy}/{DDD}{n}.{ext}"
+          "path": "content/media/{yyyy}/{DDD}{n}.{ext}",
+          "url": "content/media/{yyyy}/{DDD}{n}.{ext}"
         }
       }
     }
