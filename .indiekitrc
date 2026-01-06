@@ -19,7 +19,7 @@
         },
         "media": {
           "path": "content/photos/{yyyy}/{DDD}{n}.{ext}",
-          "url": "https://REDACTED.b-cdn.net/content/photos/{yyyy}/{DDD}{n}"
+          "url": "https://REDACTED.b-cdn.net/content/photos/{yyyy}/{DDD}{n}.{ext}"
         }
       },
       "photo": {
@@ -30,7 +30,7 @@
         },
         "media": {
           "path": "content/photos/{yyyy}/{DDD}{n}.{ext}",
-          "url": "https://REDACTED.b-cdn.net/content/photos/{yyyy}/{DDD}{n}"
+          "url": "https://REDACTED.b-cdn.net/content/photos/{yyyy}/{DDD}{n}.{ext}"
         }
       }
     }
