@@ -26,7 +26,7 @@
         "name": "Photo",
         "post": {
           "path": "content/photos/{yyyy}/{DDD}{n}.md",
-          "url": "photos/{yyyy}/{DDD}{n}"
+          "url": "content/photos/{yyyy}/{DDD}{n}"
         },
         "media": {
           "path": "content/media/{yyyy}/{DDD}{n}.{ext}",
