@@ -14,23 +14,23 @@
       "note": {
         "name": "Notes",
         "post": {
-          "path": "content/notes/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.md",
-          "url": "content/notes/{yyyy}/{slug}"
+          "path": "content/notes/{yyyy}/{DDD}{n}.md",
+          "url": "/notes/{yyyy}/{DDD}{n}"
         },
         "media": {
-          "path": "content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.{ext}",
-          "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}"
+          "path": "content/photos/{yyyy}/{DDD}{n}.{ext}",
+          "url": "https://REDACTED.b-cdn.net/content/photos/{yyyy}/{DDD}{n}"
         }
       },
       "photo": {
         "name": "Photo",
         "post": {
-          "path": "content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.md",
-          "url": "photos/{yyyy}-{D}/{slug}"
+          "path": "content/photos/{yyyy}/{DDD}{n}.md",
+          "url": "photos/{yyyy}/{DDD}{n}"
         },
         "media": {
-          "path": "content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.{ext}",
-          "url": "https://REDACTED.s3.REDACTED.io.cloud.ovh.net/content/photos/{yyyy}/{yyyy}{MM}{dd}-{HH}{mm}.{ext}"
+          "path": "content/photos/{yyyy}/{DDD}{n}.{ext}",
+          "url": "https://REDACTED.b-cdn.net/content/photos/{yyyy}/{DDD}{n}"
         }
       }
     }
@@ -52,7 +52,8 @@
   "@indiekit/store-s3": {
     "region": "REDACTED",
     "endpoint": "https://s3.REDACTED.io.cloud.ovh.net",
-    "bucket": "REDACTED"
+    "bucket": "REDACTED",
+    "acl": "public-read"
   },
   "@indiekit/syndicator-mastodon": {
     "includePermalink": true,
