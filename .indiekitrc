@@ -62,5 +62,8 @@
     "url": "https://REDACTED",
     "user": "REDACTED"
   },
-  "mountPath": "/image"
+  "@indiekit/endpoint-image": {
+    "mountPath": "/image",
+    "me": "https://REDACTED.b-cdn.net"
+  },
 }
