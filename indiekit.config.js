@@ -1,58 +1,83 @@
 export default {
   application: {
-    timeZone: 'Asia/Hong_Kong',
-    themeColor: '#FFB800',
-    themeColorScheme: 'dark',
-    name: 'BurgeonLab: Indiekit Server'
+    timeZone: "Asia/Hong_Kong",
+    themeColor: "#FFB800",
+    themeColorScheme: "dark",
+    name: "BurgeonLab: Indiekit Server",
   },
   publication: {
-    me: 'https://burgeonlab.com',
-    mediaStore: '@indiekit/store-s3',
-    store: '@indiekit/store-github',
+    me: process.env.PUBLICATION_URL,
+    mediaStore: "@indiekit/store-s3",
+    store: "@indiekit/store-github",
     enrichPostData: true,
-    postTypes: { note: [Object], photo: [Object] }
+    postTypes: {
+      note: {
+        name: "Microblog",
+        post: {
+          path: "content/notes/{yyyy}/{DDD}{n}.md",
+          url: "/notes/{yyyy}/{DDD}{n}",
+        },
+        media: {
+          path: "content/media/{yyyy}/{DDD}{n}.{ext}",
+          url: "content/media/{yyyy}/{DDD}{n}.{ext}",
+        },
+      },
+      photo: {
+        name: "Photo",
+        post: {
+          path: "content/photos/{yyyy}/{DDD}{n}.md",
+          url: "content/photos/{yyyy}/{DDD}{n}",
+        },
+        media: {
+          path: "content/media/{yyyy}/{DDD}{n}.{ext}",
+          url: "content/media/{yyyy}/{DDD}{n}.{ext}",
+        },
+      },
+    },
   },
   plugins: [
-    '@indiekit/preset-hugo',
-    '@indiekit/store-github',
-    '@indiekit/store-s3',
-    '@indiekit/syndicator-mastodon',
-    '@indiekit/endpoint-image',
-    '@indiekit/post-type-photo'
+    "@indiekit/preset-hugo",
+    "@indiekit/store-github",
+    "@indiekit/store-s3",
+    "@indiekit/syndicator-mastodon",
+    "@indiekit/endpoint-image",
+    "@indiekit/post-type-photo",
   ],
-  '@indiekit/preset-hugo': {
-    frontMatterFormat: 'toml'
+  "@indiekit/preset-hugo": {
+    frontMatterFormat: "toml",
   },
-  '@indiekit/store-github': {
+  "@indiekit/store-github": {
     user: process.env.STORE_GITHUB_USER,
     repo: process.env.STORE_GITHUB_REPO,
-    branch: 'main'
+    branch: "main",
   },
-  '@indiekit/store-s3': {
+  "@indiekit/store-s3": {
     region: process.env.S3_REGION,
     endpoint: process.env.S3_ENDPOINT,
     bucket: process.env.S3_BUCKET,
-    acl: 'public-read'
+    acl: "public-read",
   },
-  '@indiekit/syndicator-mastodon': {
+  "@indiekit/syndicator-mastodon": {
     includePermalink: true,
     checked: false,
     url: process.env.MASTODON_SERVER,
-    user: process.env.MASTODON_USER
+    user: process.env.MASTODON_USER,
   },
-  '@indiekit/endpoint-image': { mountPath: '/image' },
-  '@indiekit/post-type-photo': {
-    name: 'Photo',
+  "@indiekit/endpoint-image": { 
+    mountPath: "/image" 
+  },
+  "@indiekit/post-type-photo": {
+    name: "Photo",
     fields: {
-      photo: [Object],
+      photo: { required: true },
       content: {},
       category: {},
-      geo: {},
       location: {},
-      'post-status': {},
-      'mp-photo-alt': [Object],
-      published: [Object],
-      visibility: {}
-    }
-  }
-}
+      geo: {},
+      "post-status": {},
+      "mp-photo-alt": { required: true },
+      published: { required: true },
+      visibility: {},
+    },
+  },
+};
