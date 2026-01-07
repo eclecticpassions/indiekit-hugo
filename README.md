@@ -24,4 +24,9 @@ Learn more at <https://getindiekit.com>
 
 ## My Contributions
 
-- [v1.0.0 Beta 26](https://github.com/getindiekit/indiekit/releases/tag/v1.0.0-beta.26): Add `public-read` ACL permission to store-s3 
+- [v1.0.0 Beta 26](https://github.com/getindiekit/indiekit/releases/tag/v1.0.0-beta.26): Add `public-read` ACL permission to store-s3
+
+## To-Do
+
+- [ ] [Add publication:categories](https://getindiekit.com/configuration/publication#categories) using a URL for a list of tags in json
+- [ ] Move Indiekit repo and content-store to Codeberg([store-gitea](https://getindiekit.com/plugins/stores/gitea))
