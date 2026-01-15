@@ -8,7 +8,7 @@ export default {
   publication: {
     me: process.env.PUBLICATION_URL,
     mediaStore: "@indiekit/store-s3",
-    store: "@indiekit/store-github",
+    store: "@indiekit/store-gitea",
     enrichPostData: true,
     postTypes: {
       note: {
@@ -52,6 +52,12 @@ export default {
     repo: process.env.STORE_GITHUB_REPO,
     branch: "main",
   },
+  "@indiekit/store-gitea": {
+    user: process.env.STORE_GITEA_USER,
+    repo: process.env.STORE_GITEA_REPO,
+    branch: "main",
+    instance: "https://codeberg.org",
+  },
   "@indiekit/store-s3": {
     region: process.env.S3_REGION,
     endpoint: process.env.S3_ENDPOINT,
@@ -64,8 +70,8 @@ export default {
     url: process.env.MASTODON_SERVER,
     user: process.env.MASTODON_USER,
   },
-  "@indiekit/endpoint-image": { 
-    mountPath: "/image" 
+  "@indiekit/endpoint-image": {
+    mountPath: "/image",
   },
   "@indiekit/post-type-photo": {
     name: "Photo",
