@@ -1,5 +1,5 @@
 import indiekit from "@indiekit/indiekit";
-import config from "../indiekitrc";
+import config from "../indiekit.config.js";
 
 const app = indiekit(config);
 
