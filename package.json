@@ -4,7 +4,7 @@
   "description": "Indiekit server for https://burgeonlab.com",
   "main": "index.js",
   "scripts": {
-    "start": "indiekit serve"
+    "start": "node server.js"
   },
   "keywords": [
     "indiekit",
