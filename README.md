@@ -2,6 +2,12 @@
 
 Learn more at <https://getindiekit.com>
 
+## Mirror Repository
+
+**Primary source**: https://codeberg.org/burgeonlab/indiekit-hugo
+
+This GitHub repo is automatically mirrored from the primary source. All changes originate from the repo on Codeberg.
+
 ## Plugins Used
 
 - preset-hugo
