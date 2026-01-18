@@ -5,6 +5,14 @@ export default {
     themeColorScheme: "dark",
     name: "BurgeonLab: Indiekit Server",
   },
+  plugins: [
+    "@indiekit/preset-hugo",
+    "@indiekit/store-github",
+    "@indiekit/store-gitea",
+    "@indiekit/store-s3",
+    "@indiekit/syndicator-mastodon",
+    "@indiekit/endpoint-image",
+  ],
   publication: {
     me: process.env.PUBLICATION_URL,
     mediaStore: "@indiekit/store-s3",
@@ -14,7 +22,6 @@ export default {
       if (properties.category) {
         properties.tags = properties.category;
       }
-      return Indiekit.publication.postTemplate(properties);
     },
     postTypes: {
       note: {
@@ -40,19 +47,10 @@ export default {
         },
         fields: {
           title: {}
-        }
+        },
       },
-    }
+    },
   },
-  plugins: [
-    "@indiekit/preset-hugo",
-    "@indiekit/store-github",
-    "@indiekit/store-gitea",
-    "@indiekit/store-s3",
-    "@indiekit/syndicator-mastodon",
-    "@indiekit/endpoint-image",
-    "@indiekit/post-type-photo",
-  ],
   "@indiekit/preset-hugo": {
     frontMatterFormat: "toml",
   },
@@ -81,19 +79,5 @@ export default {
   },
   "@indiekit/endpoint-image": {
     mountPath: "/image",
-  },
-  "@indiekit/post-type-photo": {
-    name: "Photo",
-    fields: {
-      photo: { required: true },
-      content: {},
-      category: {},
-      location: {},
-      geo: {},
-      "post-status": {},
-      "mp-photo-alt": { required: true },
-      published: { required: true },
-      visibility: {},
-    },
   },
 };
