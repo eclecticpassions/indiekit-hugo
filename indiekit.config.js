@@ -38,13 +38,10 @@ export default {
           path: "content/media/{yyyy}/{DDD}{n}.{ext}",
           url: "content/media/{yyyy}/{DDD}{n}.{ext}",
         },
+        fields: {
+          title: {}
+        }
       },
-    },
-    postTemplate: (properties) => {
-      if (properties.category) {
-        properties.tags = properties.category;
-      }
-      return Indiekit.publication.postTemplate(properties);
     }
   },
   plugins: [
@@ -88,7 +85,6 @@ export default {
   "@indiekit/post-type-photo": {
     name: "Photo",
     fields: {
-      title: {},
       photo: { required: true },
       content: {},
       category: {},
