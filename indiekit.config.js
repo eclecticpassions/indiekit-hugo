@@ -47,10 +47,24 @@ export default {
     "@indiekit/post-type-photo",
   ],
   "@indiekit/post-type-note": {
-    fields: ["name", "content", "category", "location", "geo", "featured"]
+    fields: {
+      name: {},
+      content: { required: true },
+      category: {},
+      location: {},
+      geo: {},
+      featured: {},
+    },
   },
   "@indiekit/post-type-photo": {
-    fields: ["name", "content", "category", "location", "geo", "summary", "featured"]
+    fields: {
+      name: {},
+      content: { required: true },
+      category: {},
+      location: {},
+      geo: {},
+      featured: {},
+    },
   },
   "@indiekit/preset-hugo": {
     frontMatterFormat: "toml",
