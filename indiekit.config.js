@@ -82,6 +82,7 @@ export default {
   "@indiekit/post-type-photo": {
     name: "Photo",
     fields: {
+      title: {},
       photo: { required: true },
       content: {},
       category: {},
