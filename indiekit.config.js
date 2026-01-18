@@ -11,18 +11,26 @@ export default {
     store: "@indiekit/store-gitea",
     enrichPostData: true,
     postTemplate: (properties) => {
-      const fm = { ...properties };
-      if (Array.isArray(fm.category) && fm.category.length > 0) {
-        if (!Array.isArray(fm.tags) || fm.tags.length === 0) {
-          fm.tags = fm.category.slice();
-        }
-      } else if (typeof fm.category === "string" && !fm.tags) {
-        fm.tags = fm.category
+      const p = { ...properties };
+
+      if (
+        Array.isArray(p.category) &&
+        p.category.length > 0 &&
+        (!Array.isArray(p.tags) || p.tags.length === 0)
+      ) {
+        p.tags = p.category.slice();
+      } else if (
+        typeof p.category === "string" &&
+        p.category.trim() &&
+        !p.tags
+      ) {
+        p.tags = p.category
           .split(",")
           .map((s) => s.trim())
           .filter(Boolean);
       }
-      return JSON.stringify(fm, null, 2);
+
+      return JSON.stringify(p, null, 2);
     },
     postTypes: {
       note: {
