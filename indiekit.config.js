@@ -10,13 +10,10 @@ export default {
     mediaStore: "@indiekit/store-s3",
     store: "@indiekit/store-gitea",
     enrichPostData: true,
+    categories: `${process.env.PUBLICATION_URL}/tags/index.json`,
     postTypes: {
       note: {
         name: "Microblog",
-        fields: {
-          title: {},
-          tags: {}
-        },
         post: {
           path: "content/notes/{yyyy}/{DDD}{n}.md",
           url: "/notes/{yyyy}/{DDD}{n}",
@@ -28,18 +25,14 @@ export default {
       },
       photo: {
         name: "Photo",
-        fields: {
-          title: {},
-          tags: {}
-        },
-        post: {
-          path: "content/photos/{yyyy}/{DDD}{n}.md",
-          url: "content/photos/{yyyy}/{DDD}{n}",
-        },
-        media: {
-          path: "content/media/{yyyy}/{DDD}{n}.{ext}",
-          url: "content/media/{yyyy}/{DDD}{n}.{ext}",
-        },
+      },
+      post: {
+        path: "content/photos/{yyyy}/{DDD}{n}.md",
+        url: "content/photos/{yyyy}/{DDD}{n}",
+      },
+      media: {
+        path: "content/media/{yyyy}/{DDD}{n}.{ext}",
+        url: "content/media/{yyyy}/{DDD}{n}.{ext}",
       },
     },
   },
@@ -50,7 +43,11 @@ export default {
     "@indiekit/store-s3",
     "@indiekit/syndicator-mastodon",
     "@indiekit/endpoint-image",
+    "@indiekit/post-type-note",
   ],
+  "@indiekit/post-type-note": {
+    fields: ["name", "content",  "tags", "location", "geo"],
+  },
   "@indiekit/preset-hugo": {
     frontMatterFormat: "toml",
   },
