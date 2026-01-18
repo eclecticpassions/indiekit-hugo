@@ -34,6 +34,12 @@ export default {
         },
       },
     },
+    postTemplate: (properties) => {
+      if (properties.category) {
+        properties.tags = properties.category;
+      }
+      return Indiekit.publication.postTemplate(properties);
+    }
   },
   plugins: [
     "@indiekit/preset-hugo",
