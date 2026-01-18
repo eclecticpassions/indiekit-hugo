@@ -51,19 +51,20 @@ export default {
       name: {},
       content: { required: true },
       category: {},
-      location: {},
       geo: {},
-      featured: {},
+      location: {},
+      summary: {}
     },
   },
   "@indiekit/post-type-photo": {
     fields: {
+      featured: { required: true },
       name: {},
-      content: { required: true },
+      content: {},
       category: {},
-      location: {},
       geo: {},
-      featured: {},
+      location: {},
+      summary: {}
     },
   },
   "@indiekit/preset-hugo": {
