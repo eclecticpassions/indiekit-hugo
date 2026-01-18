@@ -10,6 +10,12 @@ export default {
     mediaStore: "@indiekit/store-s3",
     store: "@indiekit/store-gitea",
     enrichPostData: true,
+    postTemplate: (properties) => {
+      if (properties.category) {
+        properties.tags = properties.category;
+      }
+      return Indiekit.publication.postTemplate(properties);
+    },
     postTypes: {
       note: {
         name: "Microblog",
