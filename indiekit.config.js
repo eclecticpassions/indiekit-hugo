@@ -44,9 +44,13 @@ export default {
     "@indiekit/syndicator-mastodon",
     "@indiekit/endpoint-image",
     "@indiekit/post-type-note",
+    "@indiekit/post-type-photo",
   ],
   "@indiekit/post-type-note": {
-    fields: ["name", "content",  "tags", "location", "geo"],
+    fields: ["name", "content", "category", "location", "geo", "featured"]
+  },
+  "@indiekit/post-type-photo": {
+    fields: ["name", "content", "category", "location", "geo", "summary", "featured"]
   },
   "@indiekit/preset-hugo": {
     frontMatterFormat: "toml",
