@@ -1,18 +1,10 @@
 export default {
   application: {
     timeZone: "Asia/Hong_Kong",
-    themeColor: "#FFB800",
+    themeColor: "#ff5e00",
     themeColorScheme: "dark",
     name: "BurgeonLab: Indiekit Server",
   },
-  plugins: [
-    "@indiekit/preset-hugo",
-    "@indiekit/store-github",
-    "@indiekit/store-gitea",
-    "@indiekit/store-s3",
-    "@indiekit/syndicator-mastodon",
-    "@indiekit/endpoint-image",
-  ],
   publication: {
     me: process.env.PUBLICATION_URL,
     mediaStore: "@indiekit/store-s3",
@@ -20,13 +12,17 @@ export default {
     enrichPostData: true,
     postTemplate: (properties) => {
       const fm = { ...properties };
-      if (Array.isArray(fm.category) && fm.category.length > 0) {
-        if (Array.isArray(fm.tags)) {
-          fm.tags = Array.from(new Set([...fm.tags, ...fm.category]));
-        } else {
-          fm.tags = fm.category;
-        }
-        delete fm.category;
+      if (
+        Array.isArray(fm.category) &&
+        fm.category.length > 0 &&
+        !Array.isArray(fm.tags)
+      ) {
+        fm.tags = fm.category.slice();
+      } else if (typeof fm.category === "string" && !fm.tags) {
+        fm.tags = fm.category
+          .split(",")
+          .map((s) => s.trim())
+          .filter(Boolean);
       }
       return JSON.stringify(fm, null, 2);
     },
@@ -55,6 +51,14 @@ export default {
       },
     },
   },
+  plugins: [
+    "@indiekit/preset-hugo",
+    "@indiekit/store-github",
+    "@indiekit/store-gitea",
+    "@indiekit/store-s3",
+    "@indiekit/syndicator-mastodon",
+    "@indiekit/endpoint-image",
+  ],
   "@indiekit/preset-hugo": {
     frontMatterFormat: "toml",
   },
