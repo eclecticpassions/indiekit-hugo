@@ -12,12 +12,10 @@ export default {
     enrichPostData: true,
     postTemplate: (properties) => {
       const fm = { ...properties };
-      if (
-        Array.isArray(fm.category) &&
-        fm.category.length > 0 &&
-        !Array.isArray(fm.tags)
-      ) {
-        fm.tags = fm.category.slice();
+      if (Array.isArray(fm.category) && fm.category.length > 0) {
+        if (!Array.isArray(fm.tags) || fm.tags.length === 0) {
+          fm.tags = fm.category.slice();
+        }
       } else if (typeof fm.category === "string" && !fm.tags) {
         fm.tags = fm.category
           .split(",")
