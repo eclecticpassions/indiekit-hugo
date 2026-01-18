@@ -19,14 +19,16 @@ export default {
     store: "@indiekit/store-gitea",
     enrichPostData: true,
     postTemplate: (properties) => {
-      const frontMatter = { ...properties };
-
-      if (frontMatter.category?.length > 0) {
-        frontMatter.tags = frontMatter.category;
-        delete frontMatter.category;
+      const fm = { ...properties };
+      if (Array.isArray(fm.category) && fm.category.length > 0) {
+        if (Array.isArray(fm.tags)) {
+          fm.tags = Array.from(new Set([...fm.tags, ...fm.category]));
+        } else {
+          fm.tags = fm.category;
+        }
+        delete fm.category;
       }
-
-      return JSON.stringify(frontMatter, null, 2);
+      return JSON.stringify(fm, null, 2);
     },
     postTypes: {
       note: {
@@ -49,12 +51,12 @@ export default {
         media: {
           path: "content/media/{yyyy}/{DDD}{n}.{ext}",
           url: "content/media/{yyyy}/{DDD}{n}.{ext}",
-        }
+        },
       },
     },
   },
   "@indiekit/preset-hugo": {
-    frontMatterFormat: "toml"
+    frontMatterFormat: "toml",
   },
   "@indiekit/store-github": {
     user: process.env.STORE_GITHUB_USER,
