@@ -10,31 +10,13 @@ export default {
     mediaStore: "@indiekit/store-s3",
     store: "@indiekit/store-gitea",
     enrichPostData: true,
-    postTemplate: (properties) => {
-      const p = { ...properties };
-
-      if (
-        Array.isArray(p.category) &&
-        p.category.length > 0 &&
-        (!Array.isArray(p.tags) || p.tags.length === 0)
-      ) {
-        p.tags = p.category.slice();
-      } else if (
-        typeof p.category === "string" &&
-        p.category.trim() &&
-        !p.tags
-      ) {
-        p.tags = p.category
-          .split(",")
-          .map((s) => s.trim())
-          .filter(Boolean);
-      }
-
-      return JSON.stringify(p, null, 2);
-    },
     postTypes: {
       note: {
         name: "Microblog",
+        fields: {
+          title: {},
+          tags: {}
+        },
         post: {
           path: "content/notes/{yyyy}/{DDD}{n}.md",
           url: "/notes/{yyyy}/{DDD}{n}",
@@ -46,6 +28,10 @@ export default {
       },
       photo: {
         name: "Photo",
+        fields: {
+          title: {},
+          tags: {}
+        },
         post: {
           path: "content/photos/{yyyy}/{DDD}{n}.md",
           url: "content/photos/{yyyy}/{DDD}{n}",
