@@ -45,10 +45,10 @@ export default {
     "@indiekit/endpoint-image",
     "@indiekit/post-type-note",
     "@indiekit/post-type-photo",
-    ],
+  ],
   "@indiekit/preset-hugo": {
-      frontMatterFormat: "toml",
-    },
+    frontMatterFormat: "toml",
+  },
   "@indiekit/post-type-note": {
     fields: {
       name: {},
@@ -57,6 +57,16 @@ export default {
       geo: {},
       location: {},
       summary: {},
+    },
+  },
+  "@indiekit/post-type-photo": {
+    fields: {
+      featured: { required: true },
+      name: {},
+      content: {},
+      category: {},
+      geo: {},
+      location: {},
     },
   },
   "@indiekit/store-github": {
