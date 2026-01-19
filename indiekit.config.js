@@ -25,14 +25,14 @@ export default {
       },
       photo: {
         name: "Photo",
-      },
-      post: {
-        path: "content/photos/{yyyy}/{DDD}{n}.md",
-        url: "content/photos/{yyyy}/{DDD}{n}",
-      },
-      media: {
-        path: "content/media/{yyyy}/{DDD}{n}.{ext}",
-        url: "content/media/{yyyy}/{DDD}{n}.{ext}",
+        post: {
+          path: "content/photos/{yyyy}/{DDD}{n}.md",
+          url: "content/photos/{yyyy}/{DDD}{n}",
+        },
+        media: {
+          path: "content/media/{yyyy}/{DDD}{n}.{ext}",
+          url: "content/media/{yyyy}/{DDD}{n}.{ext}",
+        },
       },
     },
   },
@@ -45,7 +45,10 @@ export default {
     "@indiekit/endpoint-image",
     "@indiekit/post-type-note",
     "@indiekit/post-type-photo",
-  ],
+    ],
+  "@indiekit/preset-hugo": {
+      frontMatterFormat: "toml",
+    },
   "@indiekit/post-type-note": {
     fields: {
       name: {},
@@ -53,11 +56,8 @@ export default {
       category: {},
       geo: {},
       location: {},
-      summary: {}
+      summary: {},
     },
-  },
-  "@indiekit/preset-hugo": {
-    frontMatterFormat: "toml"
   },
   "@indiekit/store-github": {
     user: process.env.STORE_GITHUB_USER,
