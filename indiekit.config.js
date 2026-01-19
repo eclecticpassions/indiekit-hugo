@@ -56,19 +56,8 @@ export default {
       summary: {}
     },
   },
-  "@indiekit/post-type-photo": {
-    fields: {
-      featured: { required: true },
-      name: {},
-      content: {},
-      category: {},
-      geo: {},
-      location: {},
-      summary: {}
-    },
-  },
   "@indiekit/preset-hugo": {
-    frontMatterFormat: "toml",
+    frontMatterFormat: "toml"
   },
   "@indiekit/store-github": {
     user: process.env.STORE_GITHUB_USER,
