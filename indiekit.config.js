@@ -35,6 +35,24 @@ export default {
         },
       },
     },
+    postTemplate: (properties) => {
+      let frontMatter = "+++\n";
+
+      if (properties.name) {
+        frontMatter += `title = "${properties.name}"\n`;
+      }
+
+      if (properties.category) {
+        const tags = Array.isArray(properties.category)
+          ? properties.category
+          : [properties.category];
+        frontMatter += `tags = [${tags.map((tag) => `"${tag}"`).join(", ")}]\n`;
+      }
+
+      frontMatter += "+++\n\n";
+
+      return frontMatter + (properties.content || "");
+    },
   },
   plugins: [
     "@indiekit/preset-hugo",
