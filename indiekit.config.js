@@ -36,22 +36,23 @@ export default {
       },
     },
     postTemplate: (properties) => {
-      let frontMatter = "+++\n";
-
-      if (properties.name) {
-        frontMatter += `title = "${properties.name}"\n`;
-      }
+      const fullContent = properties.content || "";
 
       if (properties.category) {
         const tags = Array.isArray(properties.category)
           ? properties.category
           : [properties.category];
-        frontMatter += `tags = [${tags.map((tag) => `"${tag}"`).join(", ")}]\n`;
+
+        const tagsLine = `tags = [${tags.map((tag) => `"${tag}"`).join(", ")}]`;
+        const newContent = fullContent.replace(
+          /(category\s*=\s*\[.*?\])/,
+          `$1\n${tagsLine}`,
+        );
+
+        return newContent;
       }
 
-      frontMatter += "+++\n\n";
-
-      return frontMatter + (properties.content || "");
+      return fullContent;
     },
   },
   plugins: [
