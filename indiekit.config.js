@@ -57,7 +57,6 @@ export default {
   },
   plugins: [
     "@indiekit/preset-hugo",
-    "@indiekit/store-github",
     "@indiekit/store-gitea",
     "@indiekit/store-s3",
     "@indiekit/syndicator-mastodon",
