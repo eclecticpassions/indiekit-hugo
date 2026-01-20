@@ -70,7 +70,6 @@ export default {
   },
   "@indiekit/post-type-note": {
     fields: {
-      name: {},
       content: { required: true },
       category: {},
       geo: {},
