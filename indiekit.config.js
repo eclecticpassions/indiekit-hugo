@@ -35,30 +35,6 @@ export default {
         },
       },
     },
-    postTemplate: (properties) => {
-      let frontMatter = "+++\n";
-
-      if (properties.date) frontMatter += `date = "${properties.date}"\n`;
-      if (properties.publishDate)
-        frontMatter += `publishDate = "${properties.publishDate}"\n`;
-      if (properties.lastmod)
-        frontMatter += `lastmod = "${properties.lastmod}"\n`;
-
-      if (properties.category) {
-        const tags = Array.isArray(properties.category)
-          ? properties.category
-          : [properties.category];
-        frontMatter += `tags = [${tags.map((tag) => `"${tag}"`).join(", ")}]\n`;
-      }
-
-      if (properties.name && properties["mp-photo"]) {
-        frontMatter += `title = "${properties.name}"\n`;
-      }
-
-      frontMatter += "+++\n\n";
-
-      return frontMatter + (properties.content || "");
-    },
   },
   plugins: [
     "@indiekit/preset-hugo",
