@@ -36,23 +36,28 @@ export default {
       },
     },
     postTemplate: (properties) => {
-      const fullContent = properties.content || "";
+      let frontMatter = "+++\n";
+
+      if (properties.date) frontMatter += `date = "${properties.date}"\n`;
+      if (properties.publishDate)
+        frontMatter += `publishDate = "${properties.publishDate}"\n`;
+      if (properties.lastmod)
+        frontMatter += `lastmod = "${properties.lastmod}"\n`;
 
       if (properties.category) {
         const tags = Array.isArray(properties.category)
           ? properties.category
           : [properties.category];
-
-        const tagsLine = `tags = [${tags.map((tag) => `"${tag}"`).join(", ")}]`;
-        const newContent = fullContent.replace(
-          /(category\s*=\s*\[.*?\])/,
-          `$1\n${tagsLine}`,
-        );
-
-        return newContent;
+        frontMatter += `tags = [${tags.map((tag) => `"${tag}"`).join(", ")}]\n`;
       }
 
-      return fullContent;
+      if (properties.name && properties["mp-photo"]) {
+        frontMatter += `title = "${properties.name}"\n`;
+      }
+
+      frontMatter += "+++\n\n";
+
+      return frontMatter + (properties.content || "");
     },
   },
   plugins: [
