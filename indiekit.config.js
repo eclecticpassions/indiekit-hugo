@@ -60,6 +60,7 @@ export default {
   "@indiekit/post-type-photo": {
     fields: {
       featured: { required: true },
+      photos: {},
       name: {},
       content: {},
       category: {},
