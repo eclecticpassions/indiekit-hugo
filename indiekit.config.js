@@ -2,7 +2,7 @@ export default {
   application: {
     timeZone: "Asia/Hong_Kong",
     themeColor: "#ff5e00",
-    themeColorScheme: "light",
+    themeColorScheme: "dark",
     name: "BurgeonLab: Indiekit Server",
   },
   publication: {
@@ -60,7 +60,7 @@ export default {
   "@indiekit/post-type-photo": {
     fields: {
       featured: { required: true },
-      photos: {},
+      photo: {},
       name: {},
       content: {},
       category: {},
