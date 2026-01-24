@@ -10,7 +10,7 @@ export default {
     mediaStore: "@indiekit/store-s3",
     store: "@indiekit/store-gitea",
     enrichPostData: true,
-    categories: `https://burgeonlab.com/tags/index.json`,
+    categories: "https://burgeonlab.com/tags/index.json",
     postTypes: {
       note: {
         name: "Microblog",
