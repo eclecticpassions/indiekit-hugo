@@ -2,7 +2,7 @@ export default {
   application: {
     timeZone: "Asia/Hong_Kong",
     themeColor: "#ff5e00",
-    themeColorScheme: "dark",
+    themeColorScheme: "light",
     name: "BurgeonLab: Indiekit Server",
   },
   publication: {
