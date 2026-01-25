@@ -15,23 +15,23 @@ export default {
       note: {
         name: "Microblog",
         post: {
-          path: "content/notes/{yyyy}/{MM}{d}-{H}{m}{s}.md",
-          url: "/notes/{yyyy}/{MM}{d}-{H}{m}{s}",
+          path: "content/notes/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
+          url: "/notes/{yyyy}/{MM}{dd}-{H}{m}{s}",
         },
         media: {
-          path: "content/media/{yyyy}/{MM}{d}-{H}{m}{s}.{ext}",
-          url: "content/media/{yyyy}/{MM}{d}-{H}{m}{s}.{ext}",
+          path: "content/media/{yyyy}/{MM}{dd}-{H}{m}{s}.{ext}",
+          url: "content/media/{yyyy}/{MM}{dd}-{H}{m}{s}.{ext}",
         },
       },
       photo: {
         name: "Photo",
         post: {
-          path: "content/photos/{yyyy}/{MM}{d}-{H}{m}{s}.md",
-          url: "content/photos/{yyyy}/{MM}{d}-{H}{m}{s}",
+          path: "content/photos/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
+          url: "content/photos/{yyyy}/{MM}{dd}-{H}{m}{s}",
         },
         media: {
-          path: "content/media/{yyyy}/{MM}{d}-{H}{m}{s}.{ext}",
-          url: "content/media/{yyyy}/{MM}{d}-{H}{m}{s}.{ext}",
+          path: "content/media/{yyyy}/{MM}{dd}-{H}{m}{s}.{ext}",
+          url: "content/media/{yyyy}/{MM}{dd}-{H}{m}{s}.{ext}",
         },
       },
     },
