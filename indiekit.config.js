@@ -15,7 +15,7 @@ export default {
       reply: {
         name: "Reply",
         post: {
-          path: "content/notes/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
+          path: "content/notes/{yyyy}/{MM}{dd}-{H}{m}{s}-reply.md",
           url: "/notes/{yyyy}/{MM}{dd}-{H}{m}{s}",
         }
       },
