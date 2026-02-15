@@ -2,7 +2,7 @@ export default {
   application: {
     timeZone: "Asia/Hong_Kong",
     themeColor: "#ff5e00",
-    themeColorScheme: "dark",
+    themeColorScheme: "light",
     name: "BurgeonLab: Indiekit Server",
   },
   publication: {
@@ -18,6 +18,9 @@ export default {
           path: "content/notes/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
           url: "/notes/{yyyy}/{MM}{dd}-{H}{m}{s}",
         }
+      },
+      like: {
+        name: "Like"
       },
       note: {
         name: "Note",
@@ -52,6 +55,7 @@ export default {
     "@indiekit/post-type-note",
     "@indiekit/post-type-photo",
     "@indiekit/post-type-reply",
+    "@indiekit/post-type-like"
   ],
   "@indiekit/preset-hugo": {
     frontMatterFormat: "toml",
@@ -63,6 +67,7 @@ export default {
       geo: {},
       location: {},
       "in-reply-to": {},
+      "like-of": {}
     },
   },
   "@indiekit/post-type-photo": {
