@@ -54,7 +54,7 @@ export default {
       category: {},
       geo: {},
       location: {},
-      summary: {},
+      "in-reply-to": {},
     },
   },
   "@indiekit/post-type-photo": {
@@ -66,6 +66,7 @@ export default {
       category: {},
       geo: {},
       location: {},
+      "in-reply-to": {},
     },
   },
   "@indiekit/store-github": {
