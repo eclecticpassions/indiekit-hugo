@@ -12,6 +12,13 @@ export default {
     enrichPostData: true,
     categories: "https://burgeonlab.com/tags/index.json",
     postTypes: {
+      reply: {
+        name: "Response",
+        post: {
+          path: "content/replies/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
+          url: "/replies/{yyyy}/{MM}{dd}-{H}{m}{s}",
+        }
+      },
       note: {
         name: "Microblog",
         post: {
@@ -44,6 +51,7 @@ export default {
     "@indiekit/endpoint-image",
     "@indiekit/post-type-note",
     "@indiekit/post-type-photo",
+    "@indiekit/post-type-reply",
   ],
   "@indiekit/preset-hugo": {
     frontMatterFormat: "toml",
