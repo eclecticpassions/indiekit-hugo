@@ -13,14 +13,14 @@ export default {
     categories: "https://burgeonlab.com/tags/index.json",
     postTypes: {
       reply: {
-        name: "Response",
+        name: "Reply",
         post: {
-          path: "content/replies/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-          url: "/replies/{yyyy}/{MM}{dd}-{H}{m}{s}",
+          path: "content/notes/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
+          url: "/notes/{yyyy}/{MM}{dd}-{H}{m}{s}",
         }
       },
       note: {
-        name: "Microblog",
+        name: "Note",
         post: {
           path: "content/notes/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
           url: "/notes/{yyyy}/{MM}{dd}-{H}{m}{s}",
