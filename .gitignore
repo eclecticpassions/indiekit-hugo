@@ -1,3 +1,5 @@
 node_modules/
 .env
 redactions.txt
+**/.DS_Store
+.DS_Store
