@@ -23,7 +23,7 @@ export default {
         name: "Like",
           post: {
           path: "content/likes/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-          url: "/likes/{yyyy}/{MM}{dd}-{H}{m}{s}",
+          url: "/likes/{yyyy}/{t}",
         }
       },
       note: {
