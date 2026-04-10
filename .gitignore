@@ -3,3 +3,5 @@ node_modules/
 redactions.txt
 **/.DS_Store
 .DS_Store
+.git/refs/.DS_Store
+.git/refs/remotes/.DS_Store
