@@ -4,7 +4,8 @@
     "description": "Indiekit server for https://burgeonlab.com",
     "main": "index.js",
     "scripts": {
-        "start": "indiekit serve"
+        "start": "indiekit serve",
+        "dev": "DEBUG=indiekit:*,@indiekit/store-gitea:* npx indiekit serve --port 8822"
     },
     "keywords": [
         "indiekit",
