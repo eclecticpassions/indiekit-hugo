@@ -1,9 +1,11 @@
 export default {
     application: {
+        name: "BurgeonLab: Indiekit Server",
+        port: process.env.PORT,
+        url: process.env.INDIEKIT_URL,
         timeZone: "Asia/Hong_Kong",
         themeColor: "#ff5e00",
         themeColorScheme: "dark",
-        name: "BurgeonLab: Indiekit Server",
     },
     publication: {
         me: process.env.PUBLICATION_URL,
