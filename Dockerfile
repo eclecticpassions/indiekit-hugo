@@ -1,6 +1,9 @@
 # Adjust NODE_VERSION as desired
 ARG NODE_VERSION=22
-FROM node:${NODE_VERSION}-alpine
+
+# sharp image lib fails on Alpine ARM64 (Pi), use Debian Node instead
+#FROM node:${NODE_VERSION}-alpine
+FROM node:22-bookworm-slim
 
 # Create app directory
 WORKDIR /app
