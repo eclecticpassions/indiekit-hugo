@@ -13,7 +13,7 @@ COPY package*.json ./
 
 # Pi optimized
 COPY package*.json ./
-RUN npm ci --only=production --no-optional --no-audit
+RUN npm ci --no-optional --no-audit
 
 # Copy application code
 COPY . .
@@ -23,4 +23,4 @@ EXPOSE 3000
 
 # Start the server by default, this can be overwritten at runtime
 # Equiv to "indiekit serve"
-CMD [ "npx", "start" ]
+CMD [ "npm", "start" ]
