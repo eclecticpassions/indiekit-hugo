@@ -1,0 +1,22 @@
+# Docker
+.docker
+.dockerignore
+
+# Environment
+.env
+redactions.txt
+README.md
+
+#Mac
+**/.DS_Store
+.DS_Store
+.git/refs/.DS_Store
+.git/refs/remotes/.DS_Store
+
+# Git
+.git
+.gitignore
+
+# Node
+node_modules
+npm-debug.log
