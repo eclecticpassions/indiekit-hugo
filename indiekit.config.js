@@ -57,6 +57,7 @@ export default {
         "@indiekit/store-gitea",
         "@indiekit/store-s3",
         "@indiekit/syndicator-mastodon",
+        "@indiekit/endpoint-webmention-io",
         "@indiekit/endpoint-image",
         "@indiekit/post-type-note",
         "@indiekit/post-type-photo",
@@ -105,6 +106,10 @@ export default {
         endpoint: process.env.S3_ENDPOINT,
         bucket: process.env.S3_BUCKET,
         acl: "public-read",
+    },
+    "@indiekit/endpoint-webmention-io": {
+        "mountPath": "/webmentions",
+        token: process.env.WEBMENTION_IO_TOKEN,
     },
     "@indiekit/syndicator-mastodon": {
         includePermalink: true,
