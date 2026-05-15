@@ -2,7 +2,7 @@ export default {
     application: {
         name: "BurgeonLab: Indiekit Server",
         port: process.env.PORT,
-        url: process.env.INDIEKIT_URL,
+        url: process.env.INDIEKIT_URL, //comment this line out to access local macOS server: `direnv allow` and `npx indiekit serve --port <PORT NUMBER>`
         timeZone: "Asia/Hong_Kong",
         themeColor: "#ff5e00",
         themeColorScheme: "dark",
@@ -108,7 +108,7 @@ export default {
         acl: "public-read",
     },
     "@indiekit/endpoint-webmention-io": {
-        "mountPath": "/webmentions",
+        mountPath: "/webmentions",
         token: process.env.WEBMENTION_IO_TOKEN,
     },
     "@indiekit/syndicator-mastodon": {
