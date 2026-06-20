@@ -35,7 +35,8 @@ COPY package*.json ./
  #   && npm install --platform=linux --arch=arm64 sharp
  
 # Use prebuilt sharp for Pi (no build tools needed)
-RUN npm ci --omit=optional --no-audit 
+RUN npm ci --omit=optional --no-audit \
+     && npm install --platform=linux --arch=arm64 sharp
 
 # Copy application code
 COPY . .
