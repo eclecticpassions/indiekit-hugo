@@ -1,0 +1,23 @@
+[Unit]
+Description=Indiekit Tailscale Funnel
+After=network-online.target tailscaled.service caddy.service docker.service
+Wants=network-online.target tailscaled.service caddy.service docker.service
+Requires=tailscaled.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+User=root
+# Clean up any stale Funnel config (ignore errors if nothing exists)
+ExecStartPre=-/usr/bin/tailscale funnel reset
+# Wait for Docker to be ready
+# Remember to change $INDIEKIT_URL to actual secret value
+ExecStartPre=/bin/sh -c 'for i in $(seq 1 30); do curl -fsS -H "Host: $INDIEKIT_URL" http>
+# Start funnel)
+ExecStart=/usr/bin/tailscale funnel --bg 80
+ExecStop=/usr/bin/tailscale funnel reset
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
