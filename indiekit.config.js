@@ -53,7 +53,7 @@ export default {
         },
     },
     plugins: [
-        "@indiekit/preset-hugo",
+        "@eclecticpassions/preset-hugo",
         "@indiekit/store-gitea",
         "@indiekit/store-s3",
         "@indiekit/syndicator-mastodon",
@@ -64,7 +64,7 @@ export default {
         "@indiekit/post-type-reply",
         "@indiekit/post-type-like",
     ],
-    "@indiekit/preset-hugo": {
+    "@eclecticpassions/preset-hugo": {
         frontMatterFormat: "toml",
     },
     "@indiekit/post-type-note": {
