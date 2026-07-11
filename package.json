@@ -18,13 +18,16 @@
         "node": ">=24.0.0"
     },
     "dependencies": {
-        "@eclecticpassions/preset-hugo": "github:eclecticpassions/indiekit-preset-hugo",
         "@indiekit/endpoint-webmention-io": "^1.0.0-beta.28",
         "@indiekit/indiekit": "^1.0.0-beta.28",
+        "@indiekit/preset-hugo": "github:eclecticpassions/indiekit-preset-hugo",
         "@indiekit/store-gitea": "^1.0.0-beta.28",
         "@indiekit/store-s3": "^1.0.0-beta.28",
         "@indiekit/syndicator-mastodon": "^1.0.0-beta.28",
         "sharp": "^0.34.5"
+    },
+    "overrides": {
+      "@indiekit/preset-hugo": "github:eclecticpassions/indiekit-preset-hugo"
     },
     "allowScripts": {
         "@parcel/watcher@2.5.6": true,
