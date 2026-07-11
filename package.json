@@ -15,7 +15,7 @@
     "license": "ISC",
     "type": "module",
     "engines": {
-        "node": ">=24.0.0"
+        "node": ">=24.17.0"
     },
     "dependencies": {
         "@indiekit/endpoint-webmention-io": "^1.0.0-beta.28",
@@ -27,13 +27,13 @@
         "sharp": "^0.34.5"
     },
     "overrides": {
-      "@indiekit/preset-hugo": "github:eclecticpassions/indiekit-preset-hugo"
+        "@indiekit/preset-hugo": "github:eclecticpassions/indiekit-preset-hugo"
     },
     "allowScripts": {
         "@parcel/watcher@2.5.6": true,
         "bcrypt@6.0.0": true,
-        "esbuild@0.27.7": true,
         "fsevents@2.3.3": true,
-        "sharp@0.34.5": true
+        "sharp@0.34.5": true,
+        "esbuild@0.28.1": true
     }
 }

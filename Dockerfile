@@ -1,6 +1,6 @@
 # Adjust NODE_VERSION as desired
 #ARG NODE_VERSION=22
-ARG NODE_VERSION=24
+ARG NODE_VERSION=24.18.0
 
 # sharp image lib fails on Alpine ARM64 (Pi), use Debian 12 Node instead
 #FROM node:${NODE_VERSION}-alpine
@@ -35,8 +35,10 @@ COPY package*.json ./
  #   && npm install --platform=linux --arch=arm64 sharp
  
 # Use prebuilt sharp for Pi (no build tools needed)
-RUN npm ci --omit=optional --no-audit \
-     && npm install --platform=linux --arch=arm64 sharp
+#RUN npm ci --omit=optional --no-audit && npm install --platform=linux --arch=arm64 sharp
+
+## Try change npm ci to npm install to honour overrides of custom preset-hugo plugin
+RUN npm install --omit=optional --no-audit && npm install --platform=linux --arch=arm64 sharp
 
 # Copy application code
 COPY . .
