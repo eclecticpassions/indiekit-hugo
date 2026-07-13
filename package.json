@@ -18,7 +18,7 @@
         "node": ">=24.17.0"
     },
     "dependencies": {
-        "@eclecticpassions/preset-hugo": "github:eclecticpassions/indiekit-preset-hugo",
+        "@eclecticpassions/indiekit-preset-hugo": "github:eclecticpassions/indiekit-preset-hugo",
         "@indiekit/endpoint-webmention-io": "^1.0.0-beta.28",
         "@indiekit/indiekit": "^1.0.0-beta.28",
         "@indiekit/store-gitea": "^1.0.0-beta.28",
