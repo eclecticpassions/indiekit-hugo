@@ -18,7 +18,7 @@ export default {
                 name: "Note",
                 post: {
                     path: "content/notes/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-                    url: "/notes/{yyyy}/{MM}{dd}-{H}{m}{s}",
+                    url: "notes/{yyyy}/{MM}{dd}-{H}{m}{s}",
                 },
                 media: {
                     path: "content/media/{yyyy}/{MM}{dd}-{H}{m}{s}.{ext}",
@@ -29,21 +29,21 @@ export default {
                 name: "Reply",
                 post: {
                     path: "content/notes/replies/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-                    url: "/notes/{yyyy}/{MM}{dd}-{H}{m}{s}-reply",
+                    url: "notes/{yyyy}/{MM}{dd}-{H}{m}{s}-reply",
                 },
             },
             rsvp: {
                 name: "RSVP",
                 post: {
                     path: "content/notes/rsvps/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-                    url: "/notes/{yyyy}/{MM}{dd}-{H}{m}{s}-rsvp",
+                    url: "notes/{yyyy}/{MM}{dd}-{H}{m}{s}-rsvp",
                 },
             },
             event: {
                 name: "Event",
                 post: {
                     path: "content/events/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-                    url: "/events/{yyyy}/{MM}{dd}-{H}{m}{s}",
+                    url: "events/{yyyy}/{MM}{dd}-{H}{m}{s}",
                 },
             },
             like: {
