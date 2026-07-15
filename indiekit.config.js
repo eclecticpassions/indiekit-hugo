@@ -28,15 +28,15 @@ export default {
             reply: {
                 name: "Reply",
                 post: {
-                    path: "content/notes/replies/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-                    url: "notes/{yyyy}/{MM}{dd}-{H}{m}{s}-reply",
+                    path: "content/replies/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
+                    url: "replies/{yyyy}/{MM}{dd}-{H}{m}{s}",
                 },
             },
             rsvp: {
                 name: "RSVP",
                 post: {
-                    path: "content/notes/rsvps/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-                    url: "notes/{yyyy}/{MM}{dd}-{H}{m}{s}-rsvp",
+                    path: "content/rsvps/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
+                    url: "rsvps/{yyyy}/{MM}{dd}-{H}{m}{s}",
                 },
             },
             event: {
