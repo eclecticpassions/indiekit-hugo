@@ -14,20 +14,6 @@ export default {
         enrichPostData: true,
         categories: "https://burgeonlab.com/tags/index.json", // Doesn't work
         postTypes: {
-            reply: {
-                name: "Reply",
-                post: {
-                    path: "content/notes/{yyyy}/{MM}{dd}-{H}{m}{s}-reply.md",
-                    url: "/notes/{yyyy}/{MM}{dd}-{H}{m}{s}",
-                },
-            },
-            like: {
-                name: "Like",
-                post: {
-                    path: "content/likes/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-                    url: "/likes/{yyyy}/{t}",
-                },
-            },
             note: {
                 name: "Note",
                 post: {
@@ -37,6 +23,34 @@ export default {
                 media: {
                     path: "content/media/{yyyy}/{MM}{dd}-{H}{m}{s}.{ext}",
                     url: "content/media/{yyyy}/{MM}{dd}-{H}{m}{s}.{ext}",
+                },
+            },
+            reply: {
+                name: "Reply",
+                post: {
+                    path: "content/notes/replies/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
+                    url: "/notes/{yyyy}/{MM}{dd}-{H}{m}{s}-reply",
+                },
+            },
+            rsvp: {
+                name: "RSVP",
+                post: {
+                    path: "content/notes/rsvps/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
+                    url: "/notes/{yyyy}/{MM}{dd}-{H}{m}{s}-rsvp",
+                },
+            },
+            event: {
+                name: "Event",
+                post: {
+                    path: "content/events/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
+                    url: "/events/{yyyy}/{MM}{dd}-{H}{m}{s}",
+                },
+            },
+            like: {
+                name: "Like",
+                post: {
+                    path: "content/likes/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
+                    url: "/likes/{yyyy}/{t}",
                 },
             },
             photo: {
@@ -69,16 +83,6 @@ export default {
     "@eclecticpassions/indiekit-preset-hugo": {
         frontMatterFormat: "toml",
     },
-    // "@indiekit/post-type-event": {
-    //   fields: {
-
-    //   }
-    // },
-    // "@indiekit/post-type-rsvp": {
-    //   fields: {
-
-    //   }
-    // },
     "@indiekit/post-type-note": {
         fields: {
             content: { required: true },
