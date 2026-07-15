@@ -17,51 +17,51 @@ export default {
             note: {
                 name: "Note",
                 post: {
-                    path: "content/notes/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-                    url: "notes/{yyyy}/{MM}{dd}-{H}{m}{s}",
+                    path: "content/notes/{yyyy}/{MM}{dd}-{HH}{mm}.md",
+                    url: "notes/{yyyy}/{MM}{dd}-{HH}{mm}",
                 },
                 media: {
-                    path: "content/media/{yyyy}/{MM}{dd}-{H}{m}{s}.{ext}",
-                    url: "content/media/{yyyy}/{MM}{dd}-{H}{m}{s}.{ext}",
+                    path: "content/media/{yyyy}/{MM}{dd}-{HH}{mm}{ss}.{ext}",
+                    url: "content/media/{yyyy}/{MM}{dd}-{HH}{mm}{ss}.{ext}",
                 },
             },
             reply: {
                 name: "Reply",
                 post: {
-                    path: "content/replies/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-                    url: "replies/{yyyy}/{MM}{dd}-{H}{m}{s}",
+                    path: "content/replies/{yyyy}/{MM}{dd}-{HH}{mm}.md",
+                    url: "replies/{yyyy}/{MM}{dd}-{HH}{mm}",
                 },
             },
             rsvp: {
                 name: "RSVP",
                 post: {
-                    path: "content/rsvps/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-                    url: "rsvps/{yyyy}/{MM}{dd}-{H}{m}{s}",
+                    path: "content/rsvps/{yyyy}/{MM}{dd}-{HH}{mm}.md",
+                    url: "rsvps/{yyyy}/{MM}{dd}-{HH}{mm}",
                 },
             },
             event: {
                 name: "Event",
                 post: {
-                    path: "content/events/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-                    url: "events/{yyyy}/{MM}{dd}-{H}{m}{s}",
+                    path: "content/events/{yyyy}/{MM}{dd}-{HH}{mm}.md",
+                    url: "events/{yyyy}/{MM}{dd}-{HH}{mm}",
                 },
             },
             like: {
                 name: "Like",
                 post: {
-                    path: "content/likes/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-                    url: "/likes/{yyyy}/{t}",
+                    path: "content/likes/{yyyy}/{MM}{dd}-{HH}{mm}.md",
+                    url: "/likes/{yyyy}/{MM}{dd}-{HH}{mm}",
                 },
             },
             photo: {
                 name: "Photo",
                 post: {
-                    path: "content/photos/{yyyy}/{MM}{dd}-{H}{m}{s}.md",
-                    url: "content/photos/{yyyy}/{MM}{dd}-{H}{m}{s}",
+                    path: "content/photos/{yyyy}/{MM}{dd}-{HH}{mm}.md",
+                    url: "content/photos/{yyyy}/{MM}{dd}-{HH}{mm}",
                 },
                 media: {
-                    path: "content/media/{yyyy}/{MM}{dd}-{H}{m}{s}.{ext}",
-                    url: "content/media/{yyyy}/{MM}{dd}-{H}{m}{s}.{ext}",
+                    path: "content/media/{yyyy}/{MM}{dd}-{HH}{mm}{ss}.{ext}",
+                    url: "content/media/{yyyy}/{MM}{dd}-{HH}{mm}{ss}.{ext}",
                 },
             },
         },
@@ -129,7 +129,7 @@ export default {
     },
     "@indiekit/syndicator-mastodon": {
         includePermalink: true,
-        checked: false,
+        checked: true,
         url: process.env.MASTODON_SERVER,
         user: process.env.MASTODON_USER,
     },
