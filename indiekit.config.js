@@ -59,6 +59,8 @@ export default {
         "@indiekit/syndicator-mastodon",
         "@indiekit/endpoint-webmention-io",
         "@indiekit/endpoint-image",
+        "@indiekit/post-type-event",
+        "@indiekit/post-type-rsvp",
         "@indiekit/post-type-note",
         "@indiekit/post-type-photo",
         "@indiekit/post-type-reply",
@@ -67,6 +69,16 @@ export default {
     "@eclecticpassions/indiekit-preset-hugo": {
         frontMatterFormat: "toml",
     },
+    // "@indiekit/post-type-event": {
+    //   fields: {
+
+    //   }
+    // },
+    // "@indiekit/post-type-rsvp": {
+    //   fields: {
+
+    //   }
+    // },
     "@indiekit/post-type-note": {
         fields: {
             content: { required: true },
