@@ -82,6 +82,7 @@ export default {
     ],
     "@eclecticpassions/indiekit-preset-hugo": {
         frontMatterFormat: "toml",
+        // timezone: "Asia/Hong_Kong" // pending feature
     },
     "@indiekit/post-type-note": {
         fields: {
