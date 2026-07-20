@@ -75,7 +75,6 @@ export default {
     },
     plugins: [
         "@eclecticpassions/indiekit-preset-hugo",
-        "@eclecticpassions/indiekit-post-type-book",
         "@indiekit/store-gitea",
         "@indiekit/store-s3",
         "@indiekit/syndicator-mastodon",
