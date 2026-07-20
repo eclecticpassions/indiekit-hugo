@@ -14,6 +14,13 @@ export default {
         enrichPostData: true,
         categories: "https://burgeonlab.com/tags/index.json", // Doesn't work
         postTypes: {
+            book: {
+                name: "Book",
+                post: {
+                    path: "content/books/{yyyy}/{MM}{dd}-{HH}{mm}.md",
+                    url: "books/{yyyy}/{MM}{dd}-{HH}{mm}",
+                },
+            },
             note: {
                 name: "Note",
                 post: {
@@ -68,6 +75,7 @@ export default {
     },
     plugins: [
         "@eclecticpassions/indiekit-preset-hugo",
+        "@eclecticpassions/indiekit-post-type-book",
         "@indiekit/store-gitea",
         "@indiekit/store-s3",
         "@indiekit/syndicator-mastodon",
