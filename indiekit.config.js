@@ -14,13 +14,6 @@ export default {
         enrichPostData: true,
         categories: "https://burgeonlab.com/tags/index.json", // Doesn't work
         postTypes: {
-            book: {
-                name: "Book",
-                post: {
-                    path: "content/books/{yyyy}/{MM}{dd}-{HH}{mm}.md",
-                    url: "books/{yyyy}/{MM}{dd}-{HH}{mm}",
-                },
-            },
             note: {
                 name: "Note",
                 post: {
