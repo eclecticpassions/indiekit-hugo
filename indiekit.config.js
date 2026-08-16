@@ -57,7 +57,7 @@ export default {
                 name: "Photo",
                 post: {
                     path: "content/photos/{yyyy}/{MM}{dd}-{HH}{mm}.md",
-                    url: "content/photos/{yyyy}/{MM}{dd}-{HH}{mm}",
+                    url: "/photos/{yyyy}/{MM}{dd}-{HH}{mm}",
                 },
                 media: {
                     path: "content/media/{yyyy}/{MM}{dd}-{HH}{mm}{ss}.{ext}",
