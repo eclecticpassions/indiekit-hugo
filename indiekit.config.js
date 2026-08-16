@@ -68,7 +68,6 @@ export default {
     },
     plugins: [
         "@eclecticpassions/indiekit-preset-hugo",
-        "@indiekit/endpoint-posts",
         "@indiekit/store-gitea",
         "@indiekit/store-s3",
         "@indiekit/syndicator-mastodon",
@@ -83,6 +82,9 @@ export default {
     ],
     "@eclecticpassions/indiekit-preset-hugo": {
         frontMatterFormat: "toml",
+    },
+    "@rmdes/indiekit-endpoint-posts": {
+        mountPath: "/posts",
     },
     "@indiekit/post-type-note": {
         fields: {

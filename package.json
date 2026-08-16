@@ -29,6 +29,9 @@
         "@rmdes/indiekit-endpoint-posts": "^1.1.1",
         "sharp": "^0.34.5"
     },
+    "overrides": {
+        "@rmdes/indiekit-endpoint-posts": "^1.1.1"
+    },
     "allowScripts": {
         "@parcel/watcher@2.5.6": true,
         "bcrypt@6.0.0": true,
