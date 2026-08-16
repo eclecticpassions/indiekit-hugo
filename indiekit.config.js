@@ -79,11 +79,12 @@ export default {
         "@indiekit/post-type-photo",
         "@indiekit/post-type-reply",
         "@indiekit/post-type-like",
+        "@indiekit/endpoint-posts",
     ],
     "@eclecticpassions/indiekit-preset-hugo": {
         frontMatterFormat: "toml",
     },
-    "@rmdes/indiekit-endpoint-posts": {
+    "@indiekit-endpoint-posts": {
         mountPath: "/posts",
     },
     "@indiekit/post-type-note": {
