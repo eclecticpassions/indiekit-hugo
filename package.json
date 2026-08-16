@@ -19,13 +19,13 @@
     },
     "dependencies": {
         "@eclecticpassions/indiekit-preset-hugo": "^1.0.9",
-        "@indiekit/endpoint-webmention-io": "^1.0.0-beta.28",
-        "@indiekit/indiekit": "^1.0.0-beta.28",
-        "@indiekit/post-type-event": "^1.0.0-beta.28",
-        "@indiekit/post-type-rsvp": "^1.0.0-beta.28",
         "@indiekit/store-gitea": "^1.0.0-beta.28",
         "@indiekit/store-s3": "^1.0.0-beta.28",
         "@indiekit/syndicator-mastodon": "^1.0.0-beta.28",
+        "@indiekit/endpoint-webmention-io": "^1.0.0-beta.28",
+        "@indiekit/post-type-event": "^1.0.0-beta.28",
+        "@indiekit/post-type-rsvp": "^1.0.0-beta.28",
+        "@indiekit/indiekit": "^1.0.0-beta.28",
         "@rmdes/indiekit-endpoint-posts": "^1.1.1",
         "sharp": "^0.34.5"
     },
