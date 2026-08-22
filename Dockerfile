@@ -1,6 +1,6 @@
 # Adjust NODE_VERSION as desired
 #ARG NODE_VERSION=22
-ARG NODE_VERSION=24.18.0
+ARG NODE_VERSION=26.7.0
 
 # sharp image lib fails on Alpine ARM64 (Pi), use Debian 12 Node instead
 #FROM node:${NODE_VERSION}-alpine
