@@ -5,6 +5,8 @@ services:
     restart: unless-stopped
     env_file:
       - .env
-    network_mode: host # Bypass Docker Networking
+    # network_mode: host # Bypass Docker Networking # use ports instead
+    ports:
+      - "8822:3000"
     environment:
       - NODE_ENV=production
