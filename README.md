@@ -1,4 +1,4 @@
-# Indiekit server for https://burgeonlab.com
+# Indiekit server for <https://burgeonlab.com>
 
 Visit <https://getindiekit.com> to learn about Indiekit. It is a [Micropub](https://indieweb.org/Micropub) server and client.
 
@@ -8,13 +8,18 @@ Visit <https://getindiekit.com> to learn about Indiekit. It is a [Micropub](http
 
 **Mirror**: <https://github.com/eclecticpassions/indiekit-hugo> [^2]
 
+## Version
+
+Currently running [v1.0.0 Beta 31](https://github.com/getindiekit/indiekit/releases/tag/v1.0.0-beta.31).
+
 ## Installed Plugins
 
 - @indiekit/store-gitea
 - @indiekit/store-s3
 - @indiekit/syndicator-mastodon
-@indiekit/endpoint-webmention-io
-- ~~@indiekit/preset-hugo~~
+- @indiekit/endpoint-webmention-io
+- @indiekit/post-type-event
+@indiekit/post-type-rsvp
 
 ## Custom Plugins
 
@@ -29,7 +34,7 @@ Visit <https://getindiekit.com> to learn about Indiekit. It is a [Micropub](http
   - For normal (i.e. personal) usage of Indiekit, public access is not required and accessible only via my [Tailnet](https://tailscale.com/docs/concepts/tailnet?q=tailnet)
 - [MongoDB](https://www.mongodb.com/) is semi-required by Indiekit for full functionality (free-tier, fully managed cloud DB called MongoDB Atlas)
 - S3-compatible bucket (object storage) as my [media store](https://getindiekit.com/configuration/publication#mediastore) (via [@indiekit/store-s3](https://getindiekit.com/plugins/stores/s3))
-  - There are many S3 providers but I am using [OVH's Standard 3-AZ Object Storage](https://www.ovhcloud.com/en/public-cloud/object-storage/) at the moment
+  - There are many S3 providers but I am using [OVH's Standard 3-AZ Object Storage](https://www.ovhcloud.com/en/public-cloud/object-storage/) at the moment. I plan to change when [S3 is out of public preview](https://bunny.net/docs/storage/s3) on [Bunny Storage](https://bunny.net/?ref=k4vc3x5108)[^1]
 - Hosted Git on Codeberg (private repo) as my [content store](https://getindiekit.com/plugins/stores/) (via [@indiekit/store-gitea](https://getindiekit.com/plugins/stores/gitea))
   - Indiekit supports a variety of Git hosts: GitHub, Gitea/Forgejo, Bitbucket, and GitLab
   - Your [content store](https://getindiekit.com/concepts#content-store) doesn't have to be separated like me. It could go into the a single S3 bucket, FTP, file-system, etc
@@ -76,4 +81,4 @@ Visit <https://getindiekit.com> to learn about Indiekit. It is a [Micropub](http
 - `syndicator-mastodon` doesn't show tags (aka categories) in the syndicated post [(issue #832](https://github.com/getindiekit/indiekit/issues/832)
 
 [^1]: This is an affiliate link. I'm a big fan of Bunny.net, I use Bunny Storage for all my static hosting needs and Bunny CDN to great effect. I've written about them [on my blog](https://burgeonlab.com/support/#bunnynet) if you're interested in trying them with your static website or migrating from GitHub Pages.
-[^2]: To run Indiekit on [Render](https://render.com), a GitHub repo is required (Render doesn't support Gitea yet—[issue #3671](https://github.com/issues/created?q=is%3Aissue+state%3Aclosed+archived%3Afalse+author%3A%40me+sort%3Aupdated-desc&issue=buildkite%7Cagent%7C3671)). Therefore, a mirror is set up from Codeberg. *All changes originate from the **primary source**.*
+[^2]: To run Indiekit on [Render](https://render.com), a GitHub repo is required (Render doesn't support Gitea yet—[issue #3671](https://github.com/issues/created?q=is%3Aissue+state%3Aclosed+archived%3Afalse+author%3A%40me+sort%3Aupdated-desc&issue=buildkite%7Cagent%7C3671)). Therefore, a mirror is set up from Codeberg. *All changes originate from the **primary source**.* (Update: I'm no longer using Render.com to host my Indiekit server.)
