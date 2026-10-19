@@ -1,5 +1,6 @@
-# Indikit Beta 31 requires at least v24
-ARG NODE_VERSION=26.11.1
+# Indikit Beta 31 requires at least v24.22.0 LTS
+# Latest is 26.11.1
+ARG NODE_VERSION=24.22.0
 
 FROM node:${NODE_VERSION}-bookworm-slim
 
