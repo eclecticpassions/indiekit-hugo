@@ -5,7 +5,14 @@ services:
     restart: unless-stopped
     env_file:
       - .env
-    ports:
-      - "8822:3000"
+#    ports:
+#      - "8822:3000"
+    networks:
+      - homelab
     environment:
       - NODE_ENV=production
+      - HOST=0.0.0.0
+
+networks:
+  homelab:
+    external: true
