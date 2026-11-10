@@ -5,13 +5,15 @@ services:
     restart: unless-stopped
     env_file:
       - .env
-#    ports:
-#      - "8822:3000"
     networks:
       - homelab
     environment:
       - NODE_ENV=production
       - HOST=0.0.0.0
+#      - URL=https://4b8.mastodon-elevator.ts.net        # Required: Indiekit's absolute public URL
+#      - NODE_TLS_REJECT_UNAUTHORIZED=0     # Fixes Node.js fetch failed for local Tailscale HTTPS loopback
+#    extra_hosts:
+#      - "4b8.mastodon-elevator.ts.net:127.21.0.1"
 
 networks:
   homelab:
